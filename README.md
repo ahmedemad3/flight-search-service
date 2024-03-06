@@ -13,7 +13,7 @@ This is a flight search application built with Spring Boot that utilizes Redis c
 Before running the application, ensure you have the following installed:
 
 - Springboot V3.2.3
-- Java Development Kit (JDK) 11 or higher
+- Java Development Kit (JDK) 17 or higher
 - Maven
 - Redis Server
 
@@ -22,7 +22,7 @@ Before running the application, ensure you have the following installed:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/ahmedemad3/flightsearchservice.git
+    git clone https://github.com/ahmedemad3/flight-search-service.git
     ```
 
 2. Navigate to the project directory:
