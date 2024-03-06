@@ -12,7 +12,7 @@ This is a flight search application built with Spring Boot that utilizes Redis c
 
 Before running the application, ensure you have the following installed:
 
-- Spring boot v3.2.3
+- Springboot V3.2.3
 - Java Development Kit (JDK) 11 or higher
 - Maven
 - Redis Server
@@ -49,7 +49,7 @@ Before running the application, ensure you have the following installed:
 
 ### Redis Setup
 
-Ensure that Redis server is running locally or using docker or update the Redis configuration in `application.properties` if using a remote server.
+Ensure that Redis server is running locally or update the Redis configuration in `application.properties` if using a remote server.
 
 ```properties
 # Redis Configuration
@@ -72,10 +72,24 @@ public RedisCacheConfiguration cacheConfiguration() {
 
 ## Usage
 
-1. Open your web browser and navigate to the flight search application.
-2. Enter the departure airport, destination airport, and desired travel date.
-3. Click on the search button to retrieve available flights.
-4. Results will be displayed, and subsequent searches for the same criteria will be cached for improved performance.
+### API Endpoint
+
+You can search for flights using the following API endpoint:
+
+**GET /api/v1/flight/search**
+
+Query Parameters:
+- `to`: Destination airport code (e.g., "LHE")
+- `from`: Departure airport code (e.g., "DXB")
+- `departDate`: Departure date in YYYY-MM-DD format (e.g., "2015-03-31")
+- `returnDate`: Return date in YYYY-MM-DD format (optional)
+- `numberOfTravellers`: Number of travelers (optional)
+
+Example API Call:
+
+```
+GET http://localhost:8080/api/v1/flight/search?to="LHE"&from="DXB"&departDate="2015-03-31"&returnDate="2015-04-07"&numberOfTravellers=3
+```
 
 ## Contributing
 
@@ -84,7 +98,3 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Feel free to customize this README according to your specific project details and requirements.
