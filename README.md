@@ -12,6 +12,7 @@ This is a flight search application built with Spring Boot that utilizes Redis c
 
 Before running the application, ensure you have the following installed:
 
+- Spring boot v3.2.3
 - Java Development Kit (JDK) 11 or higher
 - Maven
 - Redis Server
