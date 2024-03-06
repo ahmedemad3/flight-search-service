@@ -1,7 +1,3 @@
-Sure, here's a sample README file for a flight search application with Redis caching using Spring Boot:
-
----
-
 # Flight Search with Redis Cache
 
 This is a flight search application built with Spring Boot that utilizes Redis caching to improve performance and reduce API calls to external flight data providers.
